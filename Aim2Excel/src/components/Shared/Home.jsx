@@ -33,6 +33,7 @@ const services = [
         img: digipic,
     },
 ];
+
 const Home = () => {
 
     // State to toggle between the two videos
@@ -105,22 +106,7 @@ const Home = () => {
                         </motion.div>
                     </div>
                 </div>
-                <div className="flex justify-center px-16 lg:px-20 mt-16">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {services.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                className="flex items-center gap-4 bg-white/80 backdrop-blur-md border border-blue-400 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.2 }}
-                            >
-                                <img src={service.img} alt={service.title} width={70} height={50} className="rounded-lg" />
-                                <p className="text-lg font-semibold text-gray-800">{service.title}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
+                
             </div>
         </>
     )

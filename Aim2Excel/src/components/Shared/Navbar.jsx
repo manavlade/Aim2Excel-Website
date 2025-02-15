@@ -9,25 +9,26 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-white shadow-lg px-20 py-4 mb-5 sticky top-0">
-            <div className="flex justify-between items-center ">
+        // Updated: Added z-index to ensure navbar stays on top
+        <nav className="bg-white shadow-lg px-20 py-4 mb-5 sticky top-0 z-50">
+            <div className="flex justify-between items-center">
                 {/* Logo */}
-                <h1 className="text-xl font-bold">Aim2Excel</h1>
+                <h1 className="text-xl font-bold text-blue-600">Aim2Excel</h1>
 
                 {/* Desktop Menu */}
                 <ul className="hidden lg:flex gap-6 text-gray-700 font-medium">
-                    <li className="hover:text-blue-500 cursor-pointer">Home</li>
-                    <li className="hover:text-blue-500 cursor-pointer">About Us</li>
-                    <li className="hover:text-blue-500 cursor-pointer">Our Services</li>
-                    <li className="hover:text-blue-500 cursor-pointer">Portfolio</li>
-                    <li className="hover:text-blue-500 cursor-pointer">Our Process</li>
-                    <li className="hover:text-blue-500 cursor-pointer">Client Reviews</li>
-                    <li className="hover:text-blue-500 cursor-pointer">Our Team</li>
+                    <li className="hover:text-blue-500 cursor-pointer transition duration-300">Home</li>
+                    <li className="hover:text-blue-500 cursor-pointer transition duration-300">About Us</li>
+                    <li className="hover:text-blue-500 cursor-pointer transition duration-300">Our Services</li>
+                    <li className="hover:text-blue-500 cursor-pointer transition duration-300">Portfolio</li>
+                    <li className="hover:text-blue-500 cursor-pointer transition duration-300">Our Process</li>
+                    <li className="hover:text-blue-500 cursor-pointer transition duration-300">Client Reviews</li>
+                    <li className="hover:text-blue-500 cursor-pointer transition duration-300">Our Team</li>
                 </ul>
 
                 {/* Contact Button */}
                 <div className="hidden lg:block">
-                    <Button className="bg-blue-500" >
+                    <Button className="bg-blue-500 hover:bg-blue-600 transition duration-300">
                         Contact Us
                         <PhoneCall className="ml-2 w-5 h-5" />
                     </Button>
@@ -61,7 +62,7 @@ const Navbar = () => {
                             <li className="hover:text-blue-500 cursor-pointer">Our Team</li>
                         </ul>
 
-                        <Button className="mt-4 bg-blue-500">
+                        <Button className="mt-4 bg-blue-500 hover:bg-blue-600">
                             Contact Us
                             <PhoneCall className="ml-2 w-5 h-5" />
                         </Button>

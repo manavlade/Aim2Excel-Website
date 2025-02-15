@@ -2,6 +2,7 @@ import { Handshake, Rocket, ShieldCheck, Trophy } from "lucide-react";
 import about from "../../assets/about.jpg"
 import values from "../../assets/values.jpg"
 import { Separator } from "../ui/separator";
+import Services from "./Services";
 
 const About = () => {
     return (
@@ -27,7 +28,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className=" bg-gray-100" >
+                <div className="  mt-10 min-h-screen" >
                     <h1 className=" text-center pt-16 font-bold text-blue-500 lg:text-6xl text-4xl ">
                         Core Values & Company Culture
                     </h1>
@@ -82,6 +83,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <Services/>
         </>
     )
 }
